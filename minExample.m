@@ -13,7 +13,7 @@ close all,
  [Alin,B] = equationsToMatrix([eqn1, eqn2, eqn3], [x, y, z]);
  [Alsq,B] = equationsToMatrix([eqn1, eqn2, eqn3, eqn4], [x, y, z]);%overdetermined system
  X = linsolve(Alsq,B)
- Xlsqr = lsqlin(double(A),double(B));
+ Xlsqr = lsqlin(double(Alsq),double(B));
  
  %for validation:
  %https://ganymed.math.uni-heidelberg.de/~lehre/SS12/numerik0/12-la-5.pdf
